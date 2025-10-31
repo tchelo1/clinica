@@ -237,12 +237,20 @@
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-sm font-lato">&copy; 2024 Cantinho Adaptar. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="text-sm font-lato">
+            &copy; <span id="current-year"></span> Cantinho Adaptar. Todos os direitos reservados.
+        </p>
+    </div>
+</footer>
 
-    <!-- JavaScript para Interatividade -->
-    <script src="main.js"></script>
+<!-- Script para atualizar o ano automaticamente -->
+<script>
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
+
+<!-- JavaScript para Interatividade -->
+<script src="main.js"></script>
 </body>
 </html>
+
