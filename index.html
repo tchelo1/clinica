@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantinho Adaptar - Psicologia Infantil e Desenvolvimento</title>
+    <link rel="icon" type="image/x-icon" href="imagens/logo.jpg">
+    <link rel="apple-touch-icon" href="imagens/logo.jpg">
+    <link rel="shortcut icon" type="image/jpg" href="imagens/logo.jpg">
+    <!-- Carregamento do Tailwind CSS para Estilização -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carregamento de Fontes Google (Poppins e Lato) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Carregamento de Ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Estilos customizados -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-lato text-gray-700 antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-light shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-24">
+            <!-- Logo - Adaptar Brand -->
+            <a href="#" class="flex items-center h-full">
+                <img src="imagens/logo.jpg"
+                     alt="Logo Cantinho Adaptar"
+                     class="h-20 w-auto object-contain my-auto"
+                     style="max-height: 80px;"
+                     loading="lazy"
+                     onerror="this.src='https://placehold.co/200x60/66C1D9/FFFFFF?text=Logo'">
+            </a>
+            <!-- Menu de Navegação (Desktop) -->
+            <nav class="hidden md:flex space-x-8 items-center h-full">
+                <a href="#inicio" class="text-gray-600 hover:text-primary transition duration-300 font-semibold">Início</a>
+                <a href="#servicos" class="text-gray-600 hover:text-primary transition duration-300 font-semibold">Serviços</a>
+                <a href="#sobre" class="text-gray-600 hover:text-primary transition duration-300 font-semibold">Sobre Nós</a>
+                <a href="#contato" class="text-gray-600 hover:text-primary transition duration-300 font-semibold">Contato</a>
+                <a href="https://wa.me/5566992125737" target="_blank" class="bg-primary text-white px-6 py-2 rounded-lg hover:bg-opacity-90 transition duration-300 font-semibold flex items-center">
+                    <i class="fab fa-whatsapp mr-2"></i> Agendar no WhatsApp
+                </a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuButton" class="md:hidden text-gray-600 text-2xl hover:text-primary" aria-label="Abrir menu" aria-expanded="false">
+                <i id="mobileMenuIcon" class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile menu (aparece apenas em telas pequenas): overlay + panel animado -->
+    <div id="mobileMenu" class="md:hidden fixed inset-0 z-40 hidden" aria-hidden="true">
+        <!-- overlay escuro -->
+        <div id="mobileOverlay" class="mobile-overlay fixed inset-0 bg-black bg-opacity-40"></div>
+
+        <!-- painel do menu que desliza abaixo do header -->
+        <div id="mobileMenuPanel" class="mobile-panel relative bg-white shadow-md" style="--header-height:5rem; top:var(--header-height);">
+            <nav class="px-4 pb-4 pt-2 space-y-1">
+                <a href="#inicio" class="block text-gray-700 py-2 px-2 rounded hover:bg-gray-50">Início</a>
+                <a href="#servicos" class="block text-gray-700 py-2 px-2 rounded hover:bg-gray-50">Serviços</a>
+                <a href="#sobre" class="block text-gray-700 py-2 px-2 rounded hover:bg-gray-50">Sobre Nós</a>
+                <a href="#contato" class="block text-gray-700 py-2 px-2 rounded hover:bg-gray-50">Contato</a>
+                <a href="https://wa.me/5566992125737" target="_blank" class="block bg-primary text-white py-2 px-4 rounded-lg mt-4 text-center">
+                    <i class="fab fa-whatsapp mr-2"></i> Agendar no WhatsApp
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- 1. Hero Section (Início) -->
+        <section id="inicio" class="relative bg-light pt-16 pb-12 md:pt-32 md:pb-24 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <!-- Text Content -->
+                <div class="md:order-1 order-2">
+                    <h1 class="font-poppins text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                        Cuidado Especializado para o <span class="text-primary">Desenvolvimento</span> do seu Filho.
+                    </h1>
+                    <p class="mt-4 md:mt-6 text-base md:text-lg text-gray-600 font-lato">
+                        No Cantinho Adaptar, oferecemos um espaço seguro, lúdico e terapias baseadas em evidências para crianças e famílias.
+                    </p>
+                    <!-- Seção de botões removida para manter o design limpo -->
+                </div>
+                <!-- Image Slideshow 1 -->
+                <div class="md:order-2 order-1 flex justify-center">
+                    <div class="slideshow rounded-3xl shadow-2xl w-full max-w-lg" style="height: 300px; min-height: 300px; max-height: 450px;" id="slideshow1">
+                        <img src="imagens/fundos4.jpg" alt="Imagem da clínica" class="slide rounded-3xl">
+                        <img src="imagens/fundos3.jpg" alt="Imagem da clínica" class="slide rounded-3xl">
+                        <img src="imagens/fundos7.jpg" alt="Imagem da clínica" class="slide rounded-3xl">
+                        <img src="imagens/fundos8.jpg" alt="Imagem da clínica" class="slide rounded-3xl">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Services Section (Nossos Serviços) -->
+        <section id="servicos" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="font-poppins text-4xl font-bold text-gray-900">
+                    O Cuidado Multidisciplinar que Seu Filho Merece
+                </h2>
+                <p class="mt-4 text-xl text-gray-500 font-lato max-w-3xl mx-auto">
+                    Nossas intervenções são personalizadas para cada fase da vida e baseadas em evidências científicas.
+                </p>
+
+                <div class="mt-8 md:mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                    <!-- Tile 1: Psicoterapia Infanto-Juvenil -->
+                    <div class="bg-light p-6 md:p-8 rounded-xl shadow-md transform hover:translate-y-[-5px] transition duration-300 border-t-4 border-primary">
+                        <i class="fa-solid fa-child text-5xl text-primary"></i>
+                        <h3 class="font-poppins text-2xl font-semibold text-gray-900 mt-4">Psicoterapia Infanto-Juvenil</h3>
+                        <p class="mt-3 text-gray-600">
+                            Crescimento Saudável em Cada Fase. Espaço seguro para desafios e autodesenvolvimento.
+                        </p>
+                    </div>
+
+                    <!-- Tile 2: Psicologia ABA -->
+                    <div class="bg-light p-8 rounded-xl shadow-md transform hover:translate-y-[-5px] transition duration-300 border-t-4 border-secondary">
+                        <i class="fa-solid fa-puzzle-piece text-5xl text-secondary"></i>
+                        <h3 class="font-poppins text-2xl font-semibold text-gray-900 mt-4">Psicologia ABA</h3>
+                        <p class="mt-3 text-gray-600">
+                            Aprendizagem Eficaz e Comportamento Positivo. Desenvolvemos habilidades sociais, e autonomia.
+                        </p>
+                    </div>
+
+                    <!-- Tile 3: Psicomotricidade -->
+                    <div class="bg-light p-8 rounded-xl shadow-md transform hover:translate-y-[-5px] transition duration-300 border-t-4 border-accent">
+                        <i class="fa-solid fa-person-running text-5xl text-accent"></i>
+                        <h3 class="font-poppins text-2xl font-semibold text-gray-900 mt-4">Psicomotricidade</h3>
+                        <p class="mt-3 text-gray-600">
+                            Conexão corpo-mente para desenvolvimento social, comunicação e autonomia.
+                        </p>
+                    </div>
+
+                    <!-- Tile 4: Avaliação Neuropsicológica -->
+                    <div class="bg-light p-8 rounded-xl shadow-md transform hover:translate-y-[-5px] transition duration-300 border-t-4 border-primary">
+                        <i class="fa-solid fa-brain text-5xl text-primary"></i>
+                        <h3 class="font-poppins text-2xl font-semibold text-gray-900 mt-4">Avaliação Neuropsicológica</h3>
+                        <p class="mt-3 text-gray-600">
+                            Mapeamento partir 6 meses para um futuro guiado.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. About Us Section (Sobre Nós - Baseado nas fotos da Clínica) -->
+        <section id="sobre" class="py-20 bg-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+                <!-- Image Slideshow 2 -->
+                <div class="order-1">
+                    <div class="slideshow rounded-xl shadow-2xl w-full" style="height: 300px; min-height: 300px; max-height: 450px;" id="slideshow2">
+                        <img src="imagens/fundos1.jpg" alt="Imagem da clínica" class="slide rounded-xl">
+                        <img src="imagens/fundos2.jpg" alt="Imagem da clínica" class="slide rounded-xl">
+                        <img src="imagens/fundos5.jpg" alt="Imagem da clínica" class="slide rounded-xl">
+                        <img src="imagens/fundos6.jpg" alt="Imagem da clínica" class="slide rounded-xl">
+                        <img src="imagens/fundos9.jpg" alt="Imagem da clínica" class="slide rounded-xl">
+                    </div>
+                </div>
+                
+                <!-- Text Content -->
+                <div class="order-2">
+                    <!-- [INSERIR CÓDIGO AQUI]: Edite o título e o texto de descrição Sobre Nós -->
+                    <h2 class="font-poppins text-4xl font-bold text-gray-900">
+                        Um Espaço Pensado para Acolher
+                    </h2>
+                    <p class="mt-6 text-lg text-gray-600 font-lato">
+                        Nascido do desejo de oferecer um tratamento humanizado e individualizado, o Cantinho Adaptar é mais que uma clínica: é um ambiente seguro e adaptado onde cada criança pode florescer.
+                    </p>
+                    <ul class="mt-6 space-y-3 text-lg text-gray-700 font-lato">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-secondary mt-1 mr-3"></i>
+                            Foco na criança em sua integralidade.
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-secondary mt-1 mr-3"></i>
+                            Equipe multidisciplinar especializada.
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check-circle text-secondary mt-1 mr-3"></i>
+                            Compromisso com o desenvolvimento e a felicidade.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. CTA / Diferenciais Section (Cores Vibrantes do Logo) -->
+        <section class="py-20 bg-primary">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+                <h2 class="font-poppins text-4xl font-bold">
+                    Transforme os Desafios em Conquistas
+                </h2>
+                <p class="mt-4 text-xl font-lato max-w-4xl mx-auto">
+                    Não espere. O desenvolvimento do seu filho começa com o primeiro passo. Estamos aqui para guiar sua família.
+                </p>
+                <!-- Botão de agendamento removido conforme solicitado -->
+            </div>
+        </section>
+
+        <!-- 5. Contact Section (Contato) -->
+        <section id="contato" class="py-20 bg-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="font-poppins text-4xl font-bold text-center text-gray-900 mb-12">
+                    Entre em Contato
+                </h2>
+                <div class="grid gap-12">
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="font-poppins text-2xl font-semibold text-primary mb-4">Informações</h3>
+                        <div class="space-y-4 text-lg">
+                            <p class="flex items-center">
+                                <i class="fa-solid fa-phone text-secondary w-6"></i>
+                                <!-- [INSERIR CÓDIGO AQUI]: Edite o número de telefone -->
+                                (66) 99212-5737
+                            </p>
+                            <p class="flex items-center">
+                                <i class="fa-brands fa-whatsapp text-secondary w-6"></i>
+                                <!-- [INSERIR CÓDIGO AQUI]: Edite o link e o número do WhatsApp -->
+                                <a href="https://wa.me/5566992125737" target="_blank" class="hover:underline">Fale Conosco no WhatsApp</a>
+                            </p>
+                            <p class="flex items-start">
+                                <i class="fa-solid fa-location-dot text-secondary w-6 mt-1"></i>
+                                Rua Maringá, 920 - Jardim Riva
+                            </p>
+                            <div class="flex space-x-6 mt-6 pt-4 border-t border-gray-100">
+                                <!-- [INSERIR CÓDIGO AQUI]: Edite o link do Instagram -->
+                                <a href="https://www.instagram.com/cantinho_adaptarpva" target="_blank" class="text-gray-500 hover:text-primary text-3xl transition duration-300">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm font-lato">&copy; 2024 Cantinho Adaptar. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript para Interatividade -->
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* Cores da marca */
+:root {
+    --color-primary: #66C1D9;
+    --color-secondary: #9ED9A0;
+    --color-accent: #F2C94C;
+    --color-bg-light: #F4F9FF;
+}
+
+/* Utility Classes */
+.text-primary { color: var(--color-primary); }
+.bg-primary { background-color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.bg-secondary { background-color: var(--color-secondary); }
+.bg-light { background-color: var(--color-bg-light); }
+.font-poppins { font-family: 'Poppins', sans-serif; }
+.font-lato { font-family: 'Lato', sans-serif; }
+.shadow-soft { box-shadow: 0 4px 15px rgba(102, 193, 217, 0.2); }
+
+/* Mobile Menu */
+.mobile-overlay {
+    transition: opacity .25s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.mobile-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .28s ease;
+}
+
+.mobile-panel.open {
+    max-height: 600px;
+}
+
+/* Slideshow */
+.slideshow {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 450px; /* Tamanho fixo para desktop */
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    object-fit: cover;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/* Mobile Styles (max-width: 640px) */
+@media screen and (max-width: 640px) {
+    .slideshow {
+        height: 250px; /* Altura reduzida para mobile */
+    }
+    
+    .font-poppins {
+        word-break: break-word;
+        hyphens: auto;
+    }
+    
+    .p-8 {
+        padding: 1rem !important;
+    }
+    
+    .gap-8 {
+        gap: 1rem !important;
+    }
+    
+    .space-y-4 > * + * {
+        margin-top: 1rem;
+    }
+}
+
+/* Tablet Styles (641px - 1024px) */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    .slideshow {
+        height: 350px; /* Altura média para tablet */
+    }
+    
+    .space-y-4 > * + * {
+        margin-top: 1.25rem;
+    }
+}
+
+/* Disable hover effects on touch devices */
+@media (hover: none) {
+    [class*="hover:"] {
+        transform: none !important;
+        opacity: 1 !important;
+    }
+}
